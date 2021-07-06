@@ -8,8 +8,22 @@
 6. Vue中的key有什么作用。
 7. 计算属性和watch的区别。
 
-
-
+* vue 生命周期，每个生命周期项目中什么时候会用
+* vue keep-alive 常用属性
+* 组件通信方式
+* hash 和 history 区别
+* v-for 唯一 key
+* vue 运行机制，依赖收集
+* v-show 和 v-if
+* watch 和 computed
+* vuex 中模块拆怎么做的
+* 一个页面有父子组件，进入之后的渲染顺序触发的生命周期是什么样的
+* keep-alive，如果只想要router-view里面的某个组件被缓存，怎么做
+* 组件通信中的eventbus原理是什么
+* vue diff简单讲讲
+* 3.0proxy 讲讲，和 2.0 区别（广度）
+* data为什么是函数
+* 常用vue api原理(包括不限于nextTick,watch，computed)
 
 ---
 
