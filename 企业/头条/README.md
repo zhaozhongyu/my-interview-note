@@ -1,4 +1,4 @@
-1. 对 async、await 的理理解，内部原理理
+1. 对 async、await 的理理解，内部原理理解
 
 2. 介绍下 Promise，内部实现
 
@@ -11,14 +11,6 @@
 6. tcp3 次握⼿
 
 7. tcp 属于哪⼀一层（1 物理理层 -> 2 数据链路路层 -> 3 网络层(ip)-> 4 传输层 (tcp) -> 5 应⽤用层(http)）
-
-8. redux 的设计思想
-
-9. 接⼊入 redux 的过程
-
-10. 绑定 connect 的过程
-
-11. connect 原理理
 
 12. webpack 介绍
 
