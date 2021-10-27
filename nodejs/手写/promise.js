@@ -18,19 +18,19 @@
      this.ctx = new Proxy({ state: pending, value: undefined, error: undefined, uid: id++ }, {
        set: (target, key, value) => {
          if (key === 'state') {
+           // 拦截对state的设置, 保证回调执行
            if (Reflect.get(target, key) === pending && value !== pending) {
-             // console.log('set state:', value, ', pre state:', Reflect.get(target, key), ', id:', this.ctx.uid,);
              Reflect.set(target, key, value);
              
-             // 这里调用
+             // 这里进行回调
              // 2.2.2.2 立即执行时会导致当前方法中resolve后的内容无法执行
-             setTimeout(() => {
+             queueMicrotask(() => {
                // console.log('run executer', this.ctx.state, ', id:', this.ctx.uid, ', executers length: ', this.executerFns.length);
                while (this.executerFns.length > 0) {
                  let executer = this.executerFns.shift();
                  executer();
                }
-             }, 0);
+             });
            }
          } else {
            Reflect.set(target, key, value);
@@ -43,7 +43,6 @@
          // 2.3.1: If `promise` and `x` refer to the same object, reject `promise` with a `TypeError' as the reason.
          throw new TypeError('can not return current promise instance! rules: promises-aplus 2.3.1');
        }
-       // console.log('resolve val: ', val, this.ctx.state)
        if(val instanceof Promise){ // 是promise 就继续递归解析
            return val.then(resolve, reject)
        } else if ((typeof val === 'object' && val !== null) || typeof val === 'function') {
@@ -52,7 +51,6 @@
            // 规范 2.3.3.1
            let then = val.then;
            if (typeof then == 'function') {
-             // console.log('then.call: ', val);
              return then.call(val, function (val) {
                  if (called) return;
                  called = true;
@@ -64,7 +62,6 @@
                });
            } else {
              // resolve(val); // 此时x 就是一个普通对象
-             // console.log('resolve ', val);
              if (this.ctx.state === pending) {
                this.ctx.value = val;
                this.ctx.state = fulfilled;
@@ -79,7 +76,6 @@
            return ;
          }
        }
-       // console.log('resolve ', val);
        if (this.ctx.state === pending) {
          this.ctx.value = val;
          this.ctx.state = fulfilled;
@@ -117,7 +113,7 @@
        // 这时候保证已经进入了resolve/reject状态
        if (this.ctx.state !== pending) {
          // settimeout: 2.2.4 `onFulfilled` or `onRejected` must not be called until the execution context stack contains only platform code.
-         setTimeout(() => {
+         queueMicrotask(() => {
            try {
              let value;
              if (this.ctx.state === fulfilled) {
@@ -125,13 +121,11 @@
              } else if (this.ctx.state === rejected) {
                value = onrejected(this.ctx.error);
              }
-             // console.log('## resolve immediate');
              resolve(value); // 这里会继续下一个执行链条
            } catch (err) {
-             // console.log('## reject immediate');
              reject(err);
            }
-         }, 0);
+         });
        } else {
          // 返回一个闭包函数
          const executer = () => {
