@@ -42,9 +42,23 @@
         justify-content: center;
         align-items: center;
       }
+
+      /*记忆口诀：盒子宽高均为零，三面边框皆透明。 */
+      div.test:after{
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          content: " ";
+          border-right: 100px solid transparent;
+          border-top: 100px solid #ff0;
+          border-left: 100px solid transparent;
+          border-bottom: 100px solid transparent;
+      }
+
     </style>
   </head>
   <body>
+    <div class="test"></div>
     <div class="outer">
       <div class="inner">
         <div class="box">hello</div>

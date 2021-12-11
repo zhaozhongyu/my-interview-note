@@ -21,7 +21,7 @@
 
 > **跨网站指令码**（英语：Cross-site scripting，通常简称为：XSS）是一种网站应用程式的安全漏洞攻击，是[代码注入](https://www.wikiwand.com/zh-hans/%E4%BB%A3%E7%A2%BC%E6%B3%A8%E5%85%A5)的一种。它允许恶意使用者将程式码注入到网页上，其他使用者在观看网页时就会受到影响。这类攻击通常包含了 HTML 以及使用者端脚本语言。
 
-XSS 分为三种：反射型，存储型和 DOM-based
+XSS 分为三种：反射型，存储型和 DOM型
 
 ### 如何攻击
 
@@ -99,7 +99,15 @@ console.log(html);
   Content-Security-Policy: child-src 'none'
   ```
 
+- 禁止嵌入到iFrame
+  ```
+  X-Frame-Options: deny/sameorigin / allow-from https://example.com/
+  ```
+
 更多属性可以查看 [这里](https://content-security-policy.com/)
+
+### 其他
+1. innerHTML 注入的内容, 如果是包括script的情况, 默认不会执行, 但可以绕过, 如利用img的onload方法, onerror方法
 
 ## CSRF
 

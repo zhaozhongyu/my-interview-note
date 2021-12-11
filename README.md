@@ -12,7 +12,7 @@
 * 原型/原型链
 * `promise`
 * `Event Loop`/微任务&宏任务 https://www.ruanyifeng.com/blog/2014/10/event-loop.html
-* 垃圾回收机制 https://segmentfault.com/a/1190000018605776
+* 垃圾回收机制 https://segmentfault.com/a/1190000018605776 https://segmentfault.com/a/1190000023379683
 
 ## Vue
 * 生命周期
