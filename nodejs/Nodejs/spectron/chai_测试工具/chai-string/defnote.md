@@ -1,0 +1,1 @@
+﻿https://npm.taobao.org/package/chai-string

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<meta name="qrichtext" content="1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+p, li { white-space: pre-wrap; }
+</style>
+</head>
+<body style="font-family:'Tahoma'; font-size:10pt; font-weight:400; font-style:normal;">
+<p style="margin:0px;">1.  当前曲线图所使用的方法</p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">clearRect</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">(</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#8dec95;">0</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">, </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#8dec95;">0</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">, </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#00bff9;">this</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#7fdbca;">width</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">, </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#00bff9;">this</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#7fdbca;">height</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">) </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#000000;">在给定的矩形内清除指定的像素</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">setLineDash</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">(segments) 绘制虚线  </span><span style="font-family:'Microsoft Yahei,tahoma,arial,Hiragino Sans GB,宋体,sans-serif'; font-size:14px; color:#000000; background-color:#ffffff;">segments：必需，一个数组，存储虚线长度与虚线间距的数组。 第一个数组元素规定虚线尺寸，也就是我们可见的部分。第二个数组元素规定虚线与虚线之间的间隔，通过线段与间隔交替出现，构成了一个完整的虚线。</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#7fdbca;">lineWidth </span><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">设置或返回当前的线条宽度</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">beginPath</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">() </span><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">起始一条路径，或重置当前路径</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">moveTo() 把路径移动到画布中的指定点，不创建线条</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">lineTo</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">(</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d7dbe0;">points</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">[</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d7dbe0;">n</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">].</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#7fdbca;">x</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">, </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#00bff9;">this</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#7fdbca;">height</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">) 画线</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#c792ea;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">createLinearGradient() </span><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">创建线性渐变（用在画布内容上）</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">lineStroke</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">addColorStop</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">(</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#8dec95;">0</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">, </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d7dbe0;">colorStart</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">)  添加线性渐变颜色</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">lineStroke</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">addColorStop</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">(</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#8dec95;">1</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">, </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d7dbe0;">colorEnd</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">)</span></p>
+<p style="-qt-paragraph-type:empty; margin:0px; font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;"><br /></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#7fdbca;">strokeStyle</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;"> </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#00bff9;">=</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;"> </span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d7dbe0;">lineStroke 设置笔触颜色, 或者设置为</span><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#fdfcf8;"> </span><a href="https://www.w3school.com.cn/tags/canvas_fillstyle.asp" title="HTML 5 canvas fillStyle 属性"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; text-decoration: underline; color:#900b09; background-color:#fdfcf8;">fillStyle</span></a><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#fdfcf8;"> </span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">closePath</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">() </span><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">创建从当前点回到起始点的路径</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">fill</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">() 填充当前绘图</span></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#d6deeb;">ctx</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">.</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#87aff4;">stroke</span><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">() 绘制已定义的路径</span></p>
+<p style="-qt-paragraph-type:empty; margin:0px; font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px; font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;"><br /></p>
+<p style="margin:0px;"><span style="font-family:'Consolas,Courier New,monospace'; font-size:14px; color:#a7dbf7;">2. other</span></p>
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_arc.asp" title="HTML5 canvas arc() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; text-decoration: underline; color:#900b09; background-color:#f5f5f5;">arc() </span></a><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#f5f5f5;">创建弧/曲线（用于创建圆形或部分圆）</span></p>
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_arcto.asp" title="HTML5 canvas arcTo() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; text-decoration: underline; color:#900b09; background-color:#ffffff;">arcTo() </span></a><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">创建两切线之间的弧/曲线</span></p>
+<p style="-qt-paragraph-type:empty; margin:0px; font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px; font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_translate.asp" title="HTML5 canvas translate() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; text-decoration: underline; color:#900b09; background-color:#000000;">translate()</span></a></p></td>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">重新映射画布上的 (0,0) 位置</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px; font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">save()</span></p></td>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">保存当前环境的状态</span></p></td></tr>
+<tr>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#f5f5f5;">restore()</span></p></td>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#f5f5f5;">返回之前保存过的路径状态和属性</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_rotate.asp" title="HTML5 canvas rotate() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">rotate()</span></a></p></td>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#f5f5f5;">旋转当前绘图</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_rect.asp" title="HTML5 canvas rect() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">rect()</span></a></p></td>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">创建矩形</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_clip.asp" title="HTML5 canvas clip() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">clip()</span></a></p></td>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">从原始画布剪切任意形状和尺寸的区域</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_quadraticcurveto.asp" title="HTML5 canvas quadraticCurveTo() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">quadraticCurveTo()</span></a></p></td>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#f5f5f5;">创建二次贝塞尔曲线</span></p></td></tr>
+<tr>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_beziercurveto.asp" title="HTML5 canvas bezierCurveTo() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">bezierCurveTo()</span></a></p></td>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">创建三次方贝塞尔曲线</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<table border="0" style="margin:15px 0px 0px 0px;" cellspacing="2" cellpadding="0" bgcolor="#fdfcf8">
+<tr>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_transform.asp" title="HTML5 canvas transform() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">transform()</span></a></p></td>
+<td bgcolor="#f5f5f5" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#f5f5f5;">替换绘图的当前转换矩阵</span></p></td></tr>
+<tr>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><a href="https://www.w3school.com.cn/tags/canvas_settransform.asp" title="HTML5 canvas setTransform() 方法"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#900b09; background-color:#000000;">setTransform()</span></a></p></td>
+<td bgcolor="#ffffff" style=" padding-left:9; padding-right:9; padding-top:9; padding-bottom:9;">
+<p style="margin:0px;"><span style="font-family:'PingFangSC-Regular,Verdana,Arial,微软雅黑,宋体'; font-size:14px; color:#000000; background-color:#ffffff;">将当前转换重置为单位矩阵。然后运行 transform()</span></p></td></tr></table>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin:0px;"><br /></p>
+</body>
+</html>
