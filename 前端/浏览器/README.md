@@ -131,3 +131,17 @@ mc.addEventListener('message', (event) => {
 * cookie和localStorage有哪些区别
 * 介绍localStorage的api
 * 如何设计一个localStorage，保证数据的实效性
+
+### 为什么typeof可以检测类型，有没有更好的方法
+typeof 一般被用于判断一个变量的类型，我们可以利用 typeof 来判断number, string, object, boolean, function, undefined, symbol 这七种类型，这种判断能帮助我们搞定一些问题，js在底层存储变量的时候会在变量的机器码的低位1-3位存储其类型信息(000：对象，010：浮点数，100：字符串，110：布尔，1：整数)，但是null所有机器码均为0，直接被当做了对象来看待。
+那么有没有更好的办法区分类型呢，一般使用Object.prototype.toString.call()，具体可以参考这篇文章：zhuanlan.zhihu.com/p/118793721
+
+### mutationObserve是微任务还是宏任务, 为什么?
+addEventListener的回调函数会进入宏任务队列；
+
+MutationObserver的回调函数会进入微任务队列
+
+不同点: 
+addEventListener的触发方式是同步触发；比如，点击后，回调函数立即进入宏任务队列。
+
+MutationObserver的监听是异步触发，在所有的DOM操作完成后才触发使回调函数进入微任务队列。

@@ -27,6 +27,9 @@ class MinHeap {
 
   // 将已有的列表转换为最小堆
   // 堆的转换: 从最后一个非叶子节点开始，逐个将每个子树转换成一个最小堆，直到根节点也转换完成，则整棵树变成了一个最小堆。
+  /**
+   * @param {number[]} list 
+   */
   build_max_heap(list /** number[] */) {
     this.heap = [...list];
     let n = this.heap.length;
@@ -50,6 +53,9 @@ class MinHeap {
   }
 
   // 插入一个新的值, 插入时, 把n插入到heap的最后一个值中, 然后, 自底向上浮起
+  /**
+   * @param {number} n 
+   */
   push(n /** number */) {
     this.heap.push(n);
     let cur = this.heap.length - 1;
@@ -66,6 +72,10 @@ class MinHeap {
   }
 
   // 弹出第一个头结点后, 把heap中的最后一个值放到头中, 然后从上到下维护一次堆
+  /**
+   * 
+   * @returns {number}
+   */
   pop() {
     let ret = this.heap.shift();
     if (this.heap.length > 1) {
@@ -90,10 +100,16 @@ class MinHeap {
   }
 
   // 返回堆头
+  /**
+   * @return {number}
+   */
   get head() {
     return this.heaplist[0];
   }
 
+  /**
+   * @return {number}
+   */
   get size() {
     return this.heaplist.length;
   }

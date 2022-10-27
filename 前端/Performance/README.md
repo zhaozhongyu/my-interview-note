@@ -1,5 +1,35 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+# 性能优化 [链接](https://juejin.cn/post/6941278592215515143)
+前端的性能优化基本分为两部分
+## 加载速度优化
+加载速度优化是常见的前端性能优化, 有多种业界通用做法解决.
+### 网络部分
+* 网络速度, 使用cdn来进行速度加快
+* 合理使用缓存和`service worker`
+* 使用精灵图, 减少图片请求. 将`script`链接放到body底部, 加defer或async等.
+* 使用dns预解析和代码预加载
+* 使用http2 加载
+
+### 资源部分
+* 资源减小, 使用webpack进行压缩js和css代码, 使用`tree-shaking`摇树减少打包代码. 重复逻辑抽出公共函数使用.
+* 还有一个是webpack打包速度优化, 使用多进程同时打包编译. 利⽤ DllPlugin 和 DllReferencePlugin 预编译资源模块
+
+### 体验优化
+使用骨架屏或者服务端ssr.
+
+## 运行速度优化
+运行速度优化一般需要具体问题具体分析, 比较通用的是做组件懒加载.
+* 使用火焰图的方式测试不同操作的卡顿点.
+* 使用埋点的方式测试不同函数的耗时
+* 操作ui时, 尽量减少回流等.
+* 使用事件委托
+* 使用requestAnimationFrame 来实现视觉变化, 复杂计算使用requestIdleCallback利用空闲时间
+* 使用web worker
+* 降低 CSS 选择器的复杂性等
+* 使用防抖节流函数.
+
+## 内存泄漏优化等
+* 通常来说, 在一系列操作之后, 如果并没有新的元素或组件加载, 但是内存却在持续增长, 这时候就证明出现了内存泄漏. 因为我们都是页面, 最常用的方式是做一次内存快照, 在快照中查找detached element, 通常都是因为事件监听没有及时释放导致的问题
+
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [网络相关](#%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3)

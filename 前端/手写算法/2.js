@@ -12,7 +12,6 @@ var data = [
 var find = function(origin) {
   // your code are here...
   origin.__proto__.where = function () {
-    for ()
     return this;
   }
   origin.__proto__.orderBy = function () {

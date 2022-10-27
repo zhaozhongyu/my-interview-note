@@ -290,3 +290,13 @@ for ( let i=1; i<=5; i++) {
   ...
 }
 ```
+
+### type和interface的区别
+type和interface的相同点：都是用来定义对象或函数的形状, 它俩也支持继承,并且可以互相继承. 
+
+type和interface的不同点
+* type可以定义 基本类型的别名，如 type myString = string
+* type可以通过 typeof 操作符来定义，如 type myType = typeof someObj
+* type可以申明 联合类型，如 type unionType = myType1 | myType2
+* type可以申明 元组类型，如 type yuanzu = [myType1, myType2]
+* interface可以 声明合并，这种情况下，如果是type的话，就会报 重复定义 的警告
