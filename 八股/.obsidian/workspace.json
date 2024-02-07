@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "5975337bfa4b83be",
+    "type": "split",
+    "children": [
+      {
+        "id": "0fb670300c47c011",
+        "type": "tabs",
+        "dimension": 99.99999999999999,
+        "children": [
+          {
+            "id": "3d7c1347e1ac7d73",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "4.Vue/note.md"
+              }
+            }
+          },
+          {
+            "id": "cbb3db0f09f3fea7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4.Vue/note.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "37c45e045c11a68f",
+    "type": "split",
+    "children": [
+      {
+        "id": "537d358145fa87b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b67fa5d025aa28a5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "abf8ad0cd7da261c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "nextTick",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "28c2c303504e1871",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ec7ac52e61d61d0c",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9a139b30c5b6db7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69bf05bd5e6cc83c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "4.Vue/note.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1f7edc953e0cfb33",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "4.Vue/note.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dcfebfee0cbf4e4c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "230ea4d89fcb8b28",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "4.Vue/note.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "cbb3db0f09f3fea7",
+  "lastOpenFiles": [
+    "5.浏览器/README.md",
+    "5.浏览器/网络相关.md",
+    "5.浏览器/网络.md",
+    "5.浏览器/安全/安全.md",
+    "4.Vue/README.md",
+    "4.Vue/Vue2源码分析/diff.md",
+    "4.Vue/0. 双向绑定原理和diff算法.md",
+    "4.Vue/note.md",
+    "4.Vue/1.生命周期,组件通信.md",
+    "4.Vue/3.pinia.md",
+    "4.Vue/2.Vue-Router.md",
+    "3.JS/1. 作用域与作用域链.md",
+    "3.JS/README.md",
+    "3.JS/2. 闭包.md",
+    "3.JS/prototype.md",
+    "3.JS/js Worker.md",
+    "3.JS/面试题合集.md",
+    "3.JS/0.原型与原型链.md",
+    "3.JS/4.垃圾回收机制.md",
+    "3.JS/3.EventLoop.md",
+    "3.JS/webpack/tree shaking原理.md",
+    "3.JS/webpack/README.md",
+    "3.JS/webpack/1.plugin.md",
+    "3.JS/webpack/0. loader.md",
+    "3.JS/ES6/Reflect/defnote.md",
+    "3.JS/ES6/数组/defnote.md",
+    "3.JS/assets",
+    "3.JS/ES6/Generator/Generator",
+    "3.JS/ES6/变量",
+    "3.JS/ES6/Reflect",
+    "3.JS/ES6/数组",
+    "3.JS/ES6/Proxy",
+    "3.JS/ES6/Generator",
+    "3.JS/ES6",
+    "7. 手写算法/this.js",
+    "7. 手写算法/prototype.js"
+  ]
+}
